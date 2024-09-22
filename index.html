@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Login</title>
+    <script>
+        function salvarDados() {
+            // Captura os valores dos campos de login
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Armazena os dados no localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+
+            // Redireciona para a página de visualização
+            window.location.href = "dados.html";
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="event.preventDefault(); salvarDados();">
+        <label for="username">Nome de usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <button type="submit">Realizar Login</button>
+    </form>
+</body>
+</html>

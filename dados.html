@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dados.css">
+    <title>Dados Capturados</title>
+    <script>
+        // Função para carregar e exibir os dados do localStorage
+        function carregarDados() {
+            const username = localStorage.getItem("username");
+            const password = localStorage.getItem("password");
+
+            // Exibe os dados na página
+            document.getElementById("mostrarUsername").innerText = username;
+            document.getElementById("mostrarPassword").innerText = password;
+        }
+
+        // Carrega os dados assim que a página é aberta
+        window.onload = carregarDados;
+    </script>
+</head>
+<body>
+    <h2>Dados Capturados</h2>
+    <p><strong>Nome de usuário:</strong> <span id="mostrarUsername"></span></p>
+    <p><strong>Senha:</strong> <span id="mostrarPassword"></span></p>
+</body>
+</html>

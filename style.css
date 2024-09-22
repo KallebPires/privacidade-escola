@@ -1,0 +1,129 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Estilo para o formulário de login */
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Garante que os itens fiquem um embaixo do outro */
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 400px; /* Espaçamento maior para separar o título dos campos */
+    color: #4a90e2;
+    font-size: 24px;
+    display: flex;
+    text-align: center;
+    position: absolute;
+    
+}
+
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a90e2;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Estilos gerais para telas pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Adiciona um pouco de espaço nas bordas */
+    }
+
+    form {
+        padding: 20px; /* Reduz o padding do formulário */
+        width: 100%; /* Garante que o formulário ocupe toda a largura da tela */
+    }
+
+    h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    input {
+        font-size: 14px; /* Tamanho da fonte dos campos de entrada */
+    }
+
+    button {
+        font-size: 14px; /* Tamanho da fonte do botão */
+        padding: 10px; /* Ajusta o padding do botão */
+    }
+}
